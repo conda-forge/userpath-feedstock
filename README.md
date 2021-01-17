@@ -5,11 +5,11 @@ Home: https://github.com/ofek/userpath
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/userpath-feedstock/blob/master/LICENSE.txt)
 
 Summary: Cross-platform tool for adding locations to the user PATH, no elevated privileges required!
 
-
+Development: https://github.com/ofek/userpath
 
 Current build status
 ====================
