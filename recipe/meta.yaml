@@ -1,5 +1,5 @@
 {% set name = "userpath" %}
-{% set version = "1.4.1" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 211544ea02d8715fdc06f429cf66cd18c9877a31751d966d6de11b24faaed255
+  sha256: 61f84899b7280800a8b6cc1b959a0cf250f6757e6f6c7176d7455bb693a4423a
 
 build:
   number: 0
