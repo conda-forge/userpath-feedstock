@@ -19,16 +19,18 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
   run:
     - click
-    - python
+    - python >=3.6
 
 test:
   imports:
     - userpath
+    - pip
   commands:
     - userpath --help
+    - pip check
 
 about:
   home: https://github.com/ofek/userpath
