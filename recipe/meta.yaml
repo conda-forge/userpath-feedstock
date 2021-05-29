@@ -27,6 +27,7 @@ requirements:
 test:
   imports:
     - userpath
+  requires:
     - pip
   commands:
     - userpath --help
