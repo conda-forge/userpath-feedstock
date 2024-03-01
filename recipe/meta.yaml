@@ -1,5 +1,5 @@
 {% set name = "userpath" %}
-{% set version = "1.7.0" %}
+{% set version = "1.9.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: dcd66c5fa9b1a3c12362f309bbb5bc7992bac8af86d17b4e6b1a4b166a11c43f
+  sha256: 6c52288dab069257cc831846d15d48133522455d4677ee69a9781f11dbefd815
 
 build:
   number: 0
@@ -21,7 +21,7 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - click
+    - click 
     - python >=3.6
 
 test:
