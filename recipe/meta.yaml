@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: dcd66c5fa9b1a3c12362f309bbb5bc7992bac8af86d17b4e6b1a4b166a11c43f
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - userpath = userpath.cli:userpath
@@ -19,16 +19,17 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - click
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   imports:
     - userpath
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - userpath --help
     - pip check
