@@ -19,16 +19,18 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
+    - hatch
   run:
-    - click 
-    - python >=3.6
+    - click
+    - python >={{ python_min }}
 
 test:
   imports:
     - userpath
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - userpath --help
     - pip check
