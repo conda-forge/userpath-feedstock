@@ -14,13 +14,15 @@ build:
   noarch: python
   entry_points:
     - userpath = userpath.cli:userpath
-  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
+  script:
+    - '{{ PYTHON }} -m pip install hatch'
+    - '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
+    - '{{ PYTHON }} -m pip uninstall hatch'
 
 requirements:
   host:
     - pip
     - python {{ python_min }}
-    - hatch
   run:
     - click
     - python >={{ python_min }}
