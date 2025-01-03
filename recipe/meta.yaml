@@ -14,15 +14,14 @@ build:
   noarch: python
   entry_points:
     - userpath = userpath.cli:userpath
-  script:
-    - '{{ PYTHON }} -m pip install hatch'
-    - '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
-    - '{{ PYTHON }} -m pip uninstall hatch'
+  script: |
+    {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
 
 requirements:
   host:
     - pip
     - python {{ python_min }}
+    - hatchling
   run:
     - click
     - python >={{ python_min }}
@@ -41,7 +40,7 @@ about:
   home: https://github.com/ofek/userpath
   license: MIT
   license_family: MIT
-  license_file: LICENSE-MIT
+  license_file: LICENSE.txt
   summary: Cross-platform tool for adding locations to the user PATH, no elevated privileges required!
   dev_url: https://github.com/ofek/userpath
 
